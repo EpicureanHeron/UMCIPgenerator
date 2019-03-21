@@ -7,8 +7,12 @@ today = datetime.datetime.today().strftime('%Y-%m-%d')
 
 matterFileName = 'Matter-prod-A3F9-%s-0001.txt' % (today)
 matterFilterFileName = 'MatterFilters-prod-A3F9-%s-0001.txt' % (today)
+ackMatterFileName = 'Matter-prod-A3F9-%s-0001.ack' % (today)
+ackFilterFileName = 'MatterFilters-prod-A3F9-%s-0001.txt' % (today)
 matterFile = open(matterFileName, 'w')
 matterFilterFile = open(matterFilterFileName, 'w')
+ackMatterFile = open(ackMatterFileName, 'w')
+ackFilterFile = open(ackFilterFileName, 'w')
 
 def matterFilterFileCreate(f, d, p, c, fi):
    
@@ -44,3 +48,5 @@ else:
 
     matterFile.close()
     matterFilterFile.close()
+    ackMatterFile.close()
+    ackFilterFile.close()
